@@ -1,15 +1,12 @@
-# fly.toml app configuration file generated for backend-portfolio-app on 2026-03-14T02:20:03Z
+# fly.toml app configuration file generated for portfoliobacktesting-com on 2026-03-19T11:53:52Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'backend-portfolio-app'
+app = 'portfoliobacktesting-com'
 primary_region = 'iad'
 
 [build]
-
-[env]
-  PORT = '4000'
 
 [http_service]
   internal_port = 4000
@@ -20,6 +17,7 @@ primary_region = 'iad'
   processes = ['app']
 
 [[vm]]
-  memory = '256mb'
+  memory = '1gb'
   cpu_kind = 'shared'
   cpus = 1
+  memory_mb = 256
